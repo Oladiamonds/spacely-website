@@ -41,7 +41,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-1">
             {[
               { label: 'For Artisans', href: '#artisans' },
               { label: 'For Space Owners', href: '#space-owners' },
@@ -51,9 +51,15 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-[#5a5250] hover:text-[#1A0F08] transition-colors"
+                className="relative px-3.5 py-1.5 rounded-full text-sm font-medium text-[#5a5250] hover:text-white transition-colors duration-200 group/navlink"
               >
-                {link.label}
+                {/* Gradient pill background — fades in on hover */}
+                <span
+                  className="absolute inset-0 rounded-full opacity-0 group-hover/navlink:opacity-100 transition-opacity duration-200"
+                  style={{ background: 'linear-gradient(135deg, #C4472B 0%, #b03f25 60%, #9E3521 100%)' }}
+                  aria-hidden="true"
+                />
+                <span className="relative">{link.label}</span>
               </a>
             ))}
           </div>

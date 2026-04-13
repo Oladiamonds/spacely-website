@@ -134,6 +134,16 @@
   50%       { opacity: 0.5; }
 }
 
+/* Hero floating card animations — gentle bob after slide-in */
+@keyframes hero-float-a {
+  0%, 100% { transform: translateY(0px) rotate(-0.5deg); }
+  50%       { transform: translateY(-9px) rotate(0.5deg); }
+}
+@keyframes hero-float-b {
+  0%, 100% { transform: translateY(0px) rotate(0.5deg); }
+  50%       { transform: translateY(7px) rotate(-0.5deg); }
+}
+
 /* ─────────────────────────────────────────────────────────────
    Utility Classes
    ───────────────────────────────────────────────────────────── */
@@ -150,6 +160,9 @@
   .animate-slide-in-right { animation: slide-in-right 0.6s ease-out forwards; }
   .animate-slide-in-up    { animation: slide-in-up 0.5s ease-out forwards; }
   .animate-fade-in        { animation: fade-in 0.5s ease-out forwards; }
+  /* Hero card float — starts after slide-in (1.5s / 2s delay) */
+  .animate-hero-float-a   { animation: hero-float-a 4s ease-in-out 1.5s infinite; }
+  .animate-hero-float-b   { animation: hero-float-b 5s ease-in-out 2s infinite; }
 
   .delay-200 { animation-delay: 0.2s; }
   .delay-400 { animation-delay: 0.4s; }
