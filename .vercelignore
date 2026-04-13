@@ -1,0 +1,11 @@
+# Exclude app-level code not yet in this repo
+# (API routes, auth, spaces, lib, middleware — belong to main SpaceLY monorepo)
+src/app/(auth)
+src/app/(dashboard)
+src/app/api
+src/app/spaces
+src/components/spaces
+src/components/ui
+src/lib
+src/middleware.ts
+src/types
