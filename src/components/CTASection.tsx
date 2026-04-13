@@ -75,10 +75,10 @@ export default function CTASection() {
 
         {/* Dual CTA */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-          <a href="#" className="btn-primary text-base px-8 py-4">
+          <a href="#waitlist" className="btn-primary text-base px-8 py-4">
             I&apos;m an Artisan — Reserve My Spot
           </a>
-          <a href="#" className="btn-forest text-base px-8 py-4">
+          <a href="#space-owners" className="btn-forest text-base px-8 py-4">
             I Have a Space to List →
           </a>
         </div>

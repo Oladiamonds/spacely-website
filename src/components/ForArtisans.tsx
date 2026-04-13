@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const RATES: Record<string, number> = {
   photography: 28000,
@@ -156,6 +156,17 @@ const stats = [
 
 export default function ForArtisans() {
   const [tab, setTab] = useState<'artisans' | 'owners'>('artisans')
+
+  useEffect(() => {
+    const switchOnHash = () => {
+      if (window.location.hash === '#space-owners') {
+        setTab('owners')
+      }
+    }
+    switchOnHash()
+    window.addEventListener('hashchange', switchOnHash)
+    return () => window.removeEventListener('hashchange', switchOnHash)
+  }, [])
 
   return (
     <section id="artisans" className="py-24 bg-white">

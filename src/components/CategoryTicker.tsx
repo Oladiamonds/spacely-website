@@ -29,7 +29,7 @@ function TickerPill({ emoji, name, area }: { emoji: string; name: string; area: 
     <div className="flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-[#e8d5b5] shadow-sm mx-2 flex-shrink-0 hover:border-[#C4472B]/40 transition-colors">
       <span className="text-xl">{emoji}</span>
       <span className="text-sm font-medium text-[#1A0F08] whitespace-nowrap">{name}</span>
-      <span className="text-xs text-[#8C7B6E] bg-[#F5EDD6] px-2 py-0.5 rounded-full whitespace-nowrap">
+      <span className="text-xs text-[#6B5C52] bg-[#EDE0C0] px-2 py-0.5 rounded-full whitespace-nowrap">
         {area}
       </span>
     </div>
