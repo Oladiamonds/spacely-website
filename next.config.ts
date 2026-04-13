@@ -78,13 +78,8 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Experimental features for Next.js 15 performance
-  experimental: {
-    // Partial Prerendering for space listing pages (instant shell + streamed content)
-    ppr: true,
-    // React compiler for automatic memoization
-    reactCompiler: false,
-  },
+  // Partial Prerendering — merged into cacheComponents in Next.js 16
+  cacheComponents: true,
 };
 
 export default nextConfig;
