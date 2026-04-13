@@ -1,33 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-// Body font — Inter (system-like, loads from Google Fonts with fast preload)
-const inter = Inter({
+// Body font — DM Sans (clean, modern, excellent readability on mobile)
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
-// Display font — Instrument Serif (premium feel without being corporate)
-// Loaded as a local font from the public directory for performance
-const instrumentSerif = localFont({
-  src: [
-    {
-      path: "../../public/fonts/InstrumentSerif-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/InstrumentSerif-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-  ],
-  variable: "--font-instrument-serif",
+// Display font — Playfair Display (editorial serif, italic for expressive headlines)
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
   display: "swap",
-  fallback: ["Georgia", "serif"],
 });
 
 export const metadata: Metadata = {
@@ -81,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-secondary-100 text-neutral-800 font-sans">
         {children}

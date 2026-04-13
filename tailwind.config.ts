@@ -58,8 +58,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['Instrument Serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         xs: '0.75rem',
@@ -108,8 +108,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [],
 }
