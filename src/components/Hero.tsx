@@ -99,7 +99,7 @@ export default function Hero() {
               {/* Studio hero photo — Lagos creative aesthetic */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.nappy.co/photo/g9nczL6gbLb2bhgCYtjh2.jpg?width=1260"
+                src="/hero-studio.jpg"
                 alt="Nigerian creative professional in a studio space"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
