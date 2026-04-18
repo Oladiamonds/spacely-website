@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 import "./globals.css";
 
 // Body font — DM Sans (clean, modern, excellent readability on mobile)
@@ -71,7 +72,7 @@ export default function RootLayout({
       className={`${dmSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-secondary-100 text-neutral-800 font-sans">
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
